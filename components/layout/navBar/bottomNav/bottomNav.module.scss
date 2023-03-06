@@ -1,0 +1,67 @@
+@import '../../../../styles//constants';
+
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    padding: .2vw 4vw;
+    box-shadow: $shadow;
+    @media(max-width:1115px){
+    display: none;
+    }
+    button{
+        @include Button
+    }
+    .blackBtn {
+        @include Button ;
+            background-color: #000;
+            border:1px solid #000
+    }
+    .linkContainer{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        top: 0.2vw;
+        ul{
+            display: flex;
+            li{
+                list-style: none ;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                &:hover {
+                    border-bottom:2px solid $yellow;
+                   }
+                a{
+                    display: flex;
+                    color: $navbgColor;
+                    font-weight: 600;
+                    margin: 0 1vw;
+                    text-decoration: none;
+                    align-items: center;
+                    font-size: $smallFontSize;
+                    text-align: center;
+                    a:first-child{
+                        margin: 0 1vw 0 0;
+                    }
+                   
+                }
+              
+                 
+            }
+            .vl{
+                border-right: 1px solid #000;
+                height: 2vw;
+                margin-top: 1.5vw;
+            }
+            .vl:last-child{
+                border: none;
+            }
+        }
+        // a{
+        //     margin: 1vw;
+        // }
+       
+    }
+  
+}

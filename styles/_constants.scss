@@ -1,0 +1,30 @@
+
+// variables
+$mainColor: #22b0f0;
+$subMainColor: #1d4164;
+$navbgColor:#28527a;
+$shadow: 0px 3px 6px #00000029;
+$yellow:#f9ba32;
+$smallFontSize:1vw;
+$regularMobileFont:2vw;
+
+// mixins
+
+@mixin Button {
+    background: $mainColor;
+    border:1px solid $mainColor;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: none;
+    min-width: 4vw;
+    // display: flex;
+    padding: 1rem;
+    max-width: 8vw;
+    border-radius: 3px;
+  }
+
+  @mixin anchorLink {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
