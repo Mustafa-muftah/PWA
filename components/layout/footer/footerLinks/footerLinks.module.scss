@@ -1,0 +1,41 @@
+@import '../../../../styles//constants';
+
+
+.container{
+display: flex;
+flex:10;
+@media (max-width:767px){
+    flex: 12;
+    flex-wrap: wrap;
+}
+.wrapper{
+    flex:1;
+    flex: unset;
+    width: 50%;
+    div:first-of-type{
+        color:$greyBlack;
+        font-weight:600;
+        margin-bottom: 1vw;
+        font-size: 1.1vw;
+        @media (max-width:767px){
+          font-size: $titleMobileFont;
+          margin: 2vw auto;
+         
+        }
+    }
+}
+ul{
+    list-style: none;
+    li{
+        margin-bottom: .5vw;
+        @media (max-width:767px){
+            margin-bottom: 2.5vw;
+        }
+        a{
+            @include anchorLink;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+}

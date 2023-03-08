@@ -1,0 +1,143 @@
+@import "../../../../styles//constants";
+
+.container {
+  display: flex;
+  flex: 2.2;
+  flex-direction: column;
+  .title {
+    color: $greyBlack;
+    font-weight: 600;
+    margin-bottom: 1vw;
+    font-size: 1.1vw;
+    text-align: center;
+    @media (max-width:767px){
+        font-size: $titleMobileFont;
+    }
+  }
+  .callUs {
+    position: relative;
+    text-align: center;
+    font-size: $smallFontSize;
+    color:#666;
+    @media (max-width:767px){
+        font-size: $subTitleMobileFont;
+        margin: 2vw;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      left: 63%;
+      width: 19%;
+      height: 1px;
+      background: #acacac;
+      z-index: 1;
+      top: 60%;
+      transform: translate(0, -50%);
+      @media (max-width:767px){
+        height: 2px;
+        left: 59%;
+        top: 59%;
+      }
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        left: 8%;
+        width: 19%;
+        height: 1px;
+        background: #acacac;
+        z-index: 1;
+        top: 60%;
+        transform: translate(50%, -50%);
+        @media (max-width:767px){
+            height: 2px;
+            left: 13%;
+            top: 59%;
+        }
+    }
+  }
+  .support , .whatsappBtn{
+    border: 1px solid #acacac;
+    background: transparent;
+    color: #acacac;
+    padding: .5vw 1vw;
+    margin-bottom: 0;
+    font-size: 1.1vw;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 3px;
+    text-decoration: none;
+    margin-top: 1vw;  
+    &:hover{
+        background-color: $mainColor;
+        border-color: $mainColor;
+        color: $white;
+    }
+    @media(max-width:767px){
+    width: 60%;
+    margin: 1vw auto;
+    font-size: 2.5vw;
+    padding: 1vw 2vw;
+    }
+}
+.whatsappBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: #666883;
+    box-shadow: $shadow;
+    border: 1px solid transparent;
+    margin-bottom: 1vw; 
+    &:hover{
+        background-color: #25D366;
+        border-color: #25D366;
+        color: $white;
+       .whatsappIcon{
+        color: $white !important;
+       }
+    }
+    @media(max-width:767px){
+     width: 40%;
+    }
+}
+.download{
+    color:#666;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.1vw;
+    @media (max-width:767px){
+        font-size: $titleMobileFont;
+       margin:2vw ;
+       }
+}
+.stores{
+    display: flex;
+    margin-top: 1vw;
+    @media (max-width:767px){
+     width: 60%;
+    margin: auto;
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+.QR{
+    text-align: center;
+    margin-top: .5vw;
+    @media (max-width:767px){
+     margin-top: 2vw;
+    }
+    img{
+     width: 7.3vw;
+     height: 8.8vw;
+     @media (max-width:767px){
+       width: 25%;
+       height: auto;
+     }
+    }
+}
+}

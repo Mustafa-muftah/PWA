@@ -3,10 +3,15 @@
 $mainColor: #22b0f0;
 $subMainColor: #1d4164;
 $navbgColor:#28527a;
+$greyBlack:#484848;
+$grey: #929292;
+$white:#fcfcfc;
 $shadow: 0px 3px 6px #00000029;
 $yellow:#f9ba32;
-$smallFontSize:1vw;
-$regularMobileFont:2vw;
+$smallFontSize:.9vw;
+$titleMobileFont:3.2vw;
+$subTitleMobileFont:3vw;
+$regularMobileFont:2.5vw;
 
 // mixins
 
@@ -24,7 +29,10 @@ $regularMobileFont:2vw;
   }
 
   @mixin anchorLink {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    color: $grey;
+    font-size:.9vw ;
+    text-decoration: none;
+    @media (max-width:767px){
+      font-size: $regularMobileFont;
+    }
   }

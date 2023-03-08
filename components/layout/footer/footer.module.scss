@@ -1,0 +1,30 @@
+@import "../../../styles//constants";
+
+.container {
+    background-color: $white;
+    .wrapper{
+        display: flex;
+        padding: 2vw 4vw;
+        flex-wrap: wrap;
+        @media (max-width:767px){
+            flex-direction: column;
+        }
+    }
+    img{
+        display: flex;
+        margin: auto;
+        width: 100%;
+          height: auto;
+        @media (max-width:767px){
+          margin: 2vw auto;
+        }
+    }
+    span{
+        margin: 1vw 2vw ;
+        font-size: .9vw;
+        color: #929292;
+        @media (max-width:767px){
+             font-size: $subTitleMobileFont;
+        }
+    }
+}
