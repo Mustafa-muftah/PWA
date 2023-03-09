@@ -9,7 +9,6 @@ import PaymentImage from "@/public/payment.jpg"
 
 export const Footer:React.FC =() => {
     return (
-      
       <div className={styles.container}>
         <div className={styles.wrapper}>
       <FooterLinks/>

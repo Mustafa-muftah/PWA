@@ -6,13 +6,12 @@ import TwitterIcon from "@/public/icons/twitterSVG"
 import YoutubeIcon from "@/public/icons/youtubeSVG"
 import AppStore from "@/public/app-store.png"
 import GoogleStore from "@/public/google-store.png"
-import { ReactNode } from "react"
 import { StaticImageData } from "next/image"
 
 interface footerLinks {
     name:string,
     link:string,
-    icon?:any
+    icon?:SVGImageElement | any
  }
 
 interface footerSectionTypes {

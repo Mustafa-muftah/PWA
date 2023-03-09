@@ -1,3 +1,4 @@
+@import ".//constants";
 
 * {
   box-sizing: border-box;
@@ -11,5 +12,53 @@ body {
   overflow-x: unset;
 }
 
+.slick-dots.slick-thumb {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  @media(max-width:1000px){
+    bottom: -1.6vw;
+    justify-content: space-around !important;
+  }
+  @media(max-width:600px){
+    justify-content: center !important; 
+    bottom: -6vw;
+  }
+}
 
+.slick-dots.slick-thumb li {
+  width: 5vw;
+  height: 1vw ;
+  margin: 0 3px ;
+  transition: all 0.5s ease-in-out ;
+  @media(max-width:1000px){
+   margin: 0 3vw;
+  }
+  img{
+    @media(max-width:600px){
+        visibility: hidden;
+    }
+  }
+  @media(max-width:600px){
+    margin: 0 .5vw;
+    width: 10px!important;
+    background-size: cover!important;
+    height: 10px!important;
+    border-radius: 50px!important;
+    color: #000!important;
+    background: $mainColor !important;
+    border-color: $mainColor!important;
+}
+}
+@media(max-width:600px){
+.slick-dots.slick-thumb li.slick-active {
+  background: $yellow !important;
+  border-color: $yellow !important;
+}
+}
+
+.slick-dots.slick-thumb li.slick-active a img {
+ border: 2px solid $yellow ;
+ border-radius: 3px;
+}
 
