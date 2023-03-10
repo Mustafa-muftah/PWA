@@ -1,4 +1,3 @@
-import { Card } from "@/components/global/card";
 import { PromotedProducts } from "@/components/promotedProducts";
 import styles from "./landingPage.module.scss";
 import { SpecialOffers } from "@/components/specialOffer";

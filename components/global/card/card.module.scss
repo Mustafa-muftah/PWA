@@ -1,0 +1,99 @@
+@import "../../../styles//constants";
+
+.container {
+  margin: 0 1vw;
+  .cardWrapper {
+    border: 2px solid #f2f2f2 !important;
+    width: 100% !important;
+    position: relative;
+    border-radius: 18px;
+    .vertical,
+    .horizintal {
+      .upperSection {
+        padding: 2vw;
+        background-color: #fff;
+        border-radius: 18px;
+        button {
+          position: absolute;
+          z-index: 2;
+          font-size: 18px;
+          right: 9px;
+          padding: 10px 10px 5px;
+          border-radius: 25px;
+          top: 9px;
+          color: #000000;
+          cursor: pointer;
+          background: #fff;
+          border-color: transparent;
+          box-shadow: $shadow;
+          &:hover {
+            svg path:last-child {
+              fill: none;
+            }
+            svg path:last-child {
+              fill: #000;
+            }
+          }
+        }
+      }
+      .lowerSection {
+        border-top: 1px solid #f7f7f7;
+        padding: 0.5vw;
+        background-color: #fff;
+        border-radius: 18px;
+        min-height: 11vw;
+        @media(max-width:767px){
+          min-height: 23vw;
+        }
+        @media(max-width:500px){
+          min-height: 20vw;
+        }
+        svg {
+          cursor: pointer;
+        }
+        path {
+          fill: $yellow;
+        }
+        .productName {
+          a {
+            @include anchorLink;
+            font-size: 1vw;
+            margin: 0.5vw 1vw 1vw;
+            color: $greyBlack;
+            min-height: 2vw;
+            display: flex;
+            &:hover {
+              color: $mainColor;
+            }
+          }
+        }
+        .ProContainer {
+          margin: 2vw 1vw;
+          .IsPro {
+            background: $yellow;
+            padding: 0 10px;
+            color: #000;
+            border-radius: 25px;
+            font-size: 1.1vw;
+            font-weight: 600;
+            @media (max-width: 767px) {
+              font-size: $regularMobileFont;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.horizintal {
+  display: flex;
+  .upperSection {
+    padding: 0 !important;
+  }
+  .lowerSection {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}

@@ -1,50 +1,50 @@
 @import "../../styles//constants";
 
-.container{
-    text-align: center;
-    max-width: 91%;
-    margin: 2vw auto;
-    overflow: hidden;
-    .fullSizeImage{
-        width: 100%;
-        height: auto;
-    }
-    .buttonWrapper{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        button{
-    width: 17px;
-    height: 47px;
-    background-size: 9px 11px;
-    bottom: -70px;
-    color: #fff;
-    background-color: #fff;
-    border-radius: 7px;
-    border: transparent;
-    cursor: pointer;
-    box-shadow: 0px 3px 6px #00000029;
-    background-repeat: no-repeat;
-    background-position: center center;
-    z-index: 2;
-        }
-        .isPrevBtn{
-            background-image: url("/promotedProductsImages/leftArrow.png")
-        }
-        .isNextBtn{
-            background-image: url("/promotedProductsImages/rightArrow.png")
-           
-        }
-        @media(max-width:600px){
-            visibility: hidden;
-           }
-    }
-}
-
-.smallSizeImage{
+.container {
+  text-align: center;
+  max-width: 91%;
+  margin: auto;
+  overflow: hidden;
+  padding: 2vw 0;
+  .fullSizeImage {
     width: 100%;
     height: auto;
-    @media(max-width:1000px){
-        width: 10vw;
-        }
+  }
+  .buttonWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button {
+      width: 17px;
+      height: 47px;
+      background-size: 9px 11px;
+      bottom: -70px;
+      color: #fff;
+      background-color: #fff;
+      border-radius: 7px;
+      border: transparent;
+      cursor: pointer;
+      box-shadow: 0px 3px 6px #00000029;
+      background-repeat: no-repeat;
+      background-position: center center;
+      z-index: 2;
+    }
+    .isPrevBtn {
+      background-image: url("/promotedProductsImages/leftArrow.png");
+    }
+    .isNextBtn {
+      background-image: url("/promotedProductsImages/rightArrow.png");
+    }
+    @media (max-width: 600px) {
+      visibility: hidden;
+    }
+  }
+}
+
+.smallSizeImage {
+  width: 100%;
+  height: auto;
+  @media (max-width: 1000px) {
+    width: 10vw;
+  }
 }

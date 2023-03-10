@@ -1,4 +1,4 @@
-@import "../../../styles//constants";
+@import "../../styles//constants";
 
 .container {
     margin: .5vw auto 0;
@@ -21,7 +21,7 @@
     width: 100%;
     margin: auto;
     overflow: hidden;
-    padding: 3vw 0 4vw;
+    padding: 9vw 0 4vw;
     @media (max-width: 500px) {
       padding: 10vw 2vw 4vw;
     }
