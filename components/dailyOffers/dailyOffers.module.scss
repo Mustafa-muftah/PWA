@@ -1,0 +1,33 @@
+@import "../../styles//constants";
+
+.dailyOffersTitle{
+    @include sectionTitle;
+}
+.cardWrapper{
+    display: flex;
+    justify-content: space-around;
+  flex-wrap: wrap;
+.dailyOfferCardWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    img{
+        border: 2px solid #f7f7f7;
+        border-radius: 5px 5px 0 0 ;
+    }
+    .offerLink{
+        border: 2px solid #f7f7f7;
+        border-radius: 0 0 5px 5px ;
+         border-top: unset;
+        box-shadow: 0 3px 6px #f7f7f7, 0 3px 4px #f7f7f7;
+        display: flex;
+        justify-content: flex-start;
+        padding: 2vw 1vw;
+        color: $greyBlack;
+        font-weight: 400;
+        text-decoration: none;
+        text-align: center;
+    }
+}
+}
