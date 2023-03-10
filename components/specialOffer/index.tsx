@@ -7,7 +7,7 @@ export const SpecialOffers: React.FC = () => {
   return (
     <>
     <span className={styles.specialOfferTitle}>Special Offers</span>
-      <SingleRowSlider>
+      <SingleRowSlider numberOfSlides={5}>
         {specialOffersData.map((specialOffer, index) => {
           return (
             <Card

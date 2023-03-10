@@ -1,0 +1,28 @@
+@import "../../styles//constants";
+
+.brandsTitle{
+    @include sectionTitle;
+    color:$white
+}
+
+.image{
+    max-width: 10vw;
+    height: 10vw;
+    border-radius: 101px;
+    margin: auto;
+    @media(max-width:767px){
+        max-width: 15vw;
+        height: 15vw;
+    }
+}
+.brandLink{
+    display: flex;
+    justify-content: center;
+    padding: 2vw 0;
+    color: $white;
+    font-weight: 500;
+    text-decoration: none;
+    &:hover{
+        color:$mainColor
+    }
+}

@@ -1,9 +1,5 @@
 @import "../../styles//constants";
 
 .specialOfferTitle{
-    color: $navbgColor;
-    font-size: $titleDesktop;
-    font-weight: 600;
-    display: flex;
-    margin: 0 1vw 2vw;
+    @include sectionTitle;
 }

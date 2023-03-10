@@ -6,10 +6,11 @@ import { ReactNode, useRef } from "react";
 
 
 interface oneRowSliderProps{
-  children:ReactNode
+  children:ReactNode,
+  numberOfSlides:number,
 }
 
-export const SingleRowSlider:React.FC<oneRowSliderProps> =({children})=>{
+export const SingleRowSlider:React.FC<oneRowSliderProps> =({children , numberOfSlides})=>{
     const slider = useRef<any>();
     const next = () => {
       slider.current.slickNext();
@@ -20,7 +21,7 @@ export const SingleRowSlider:React.FC<oneRowSliderProps> =({children})=>{
     const settings = {
         infinite: false,
         speed: 500,
-        slidesToShow: 5,
+        slidesToShow: numberOfSlides,
         slidesToScroll: 1,
         initialSlide: 0,
         dotsClass:"customSliderDots",
@@ -28,14 +29,14 @@ export const SingleRowSlider:React.FC<oneRowSliderProps> =({children})=>{
           {
             breakpoint: 1024,
             settings: {
-              slidesToShow: 4,
+              slidesToShow: numberOfSlides -1,
               slidesToScroll: 1,
             }
           },
           {
             breakpoint: 600,
             settings: {
-              slidesToShow: 3,
+              slidesToShow: numberOfSlides-2,
               slidesToScroll: 1,
               initialSlide: 2
             }
@@ -43,7 +44,7 @@ export const SingleRowSlider:React.FC<oneRowSliderProps> =({children})=>{
           {
             breakpoint: 480,
             settings: {
-              slidesToShow: 2,
+              slidesToShow: numberOfSlides-3,
               slidesToScroll: 1
             }
           }
@@ -52,14 +53,6 @@ export const SingleRowSlider:React.FC<oneRowSliderProps> =({children})=>{
     return <div className={"oneRowSliderContainer"}> 
         <Slider ref={(c) => (slider.current = c)} {...settings}>
           {children}
-            {/* <Card type="vertical" ImageUrl={specialOffer} />
-            <Card type="vertical" ImageUrl={specialOffer} />
-            <Card type="vertical" ImageUrl={specialOffer} />
-            <Card type="vertical" ImageUrl={specialOffer} />
-            <Card type="vertical" ImageUrl={specialOffer} />
-            <Card type="vertical" ImageUrl={specialOffer} />
-            <Card type="vertical" ImageUrl={specialOffer} /> */}
-
         </Slider>
       </div>
 }
