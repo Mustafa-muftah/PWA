@@ -23,9 +23,11 @@ $regularMobileFont:2.5vw;
     color: #fff;
     cursor: pointer;
     box-shadow: none;
-    min-width: 4vw;
-    padding: 1rem;
-    max-width: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 9vw;
+    padding: 1vw 0;
     border-radius: 3px;
   }
 
@@ -80,31 +82,31 @@ $regularMobileFont:2.5vw;
     display: flex;
     position: absolute;
     top: -5vw;
-    left: 89vw;
+    left: 85vw;
     @media (max-width: 1115px) {
-      left: 89vw;
-    }
-    @media (max-width: 971px) {
-      left: 88vw;
-    }
-    @media (max-width: 851px) {
-      left: 86vw;
-    }
-    @media (max-width: 751px) {
       left: 85vw;
     }
-    @media (max-width: 651px) {
+    @media (max-width: 971px) {
+      left: 84vw;
+    }
+    @media (max-width: 851px) {
       left: 83vw;
     }
-    @media (max-width: 590px) {
+    @media (max-width: 751px) {
+      left: 82vw;
+    }
+    @media (max-width: 651px) {
       left: 81vw;
     }
+    @media (max-width: 590px) {
+      left: 79vw;
+    }
     @media (max-width: 500px) {
-      left: 77vw;
+      left: 76vw;
       top: -7vw;
     }
     @media (max-width: 375px) {
-      left: 79vw;
+      left: 75vw;
       top: -7vw;
     }
     &::before {

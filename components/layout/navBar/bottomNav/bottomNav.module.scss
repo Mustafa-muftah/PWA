@@ -4,7 +4,7 @@
 .container{
     display: flex;
     justify-content: space-around;
-    padding: .2vw 4.5vw;
+    padding: .2vw 3.5vw;
     box-shadow: $shadow;
     @media(max-width:1115px){
     display: none;
@@ -15,7 +15,8 @@
     .blackBtn {
         @include Button ;
             background-color: #000;
-            border:1px solid #000
+            border:1px solid #000;
+            font-weight: 600;
     }
     .linkContainer{
         display: flex;
@@ -31,6 +32,9 @@
                 justify-content: center;
                 &:hover {
                     border-bottom:2px solid $yellow;
+                    a{
+                        color:$yellow
+                    }
                    }
                 a{
                     display: flex;
@@ -58,10 +62,6 @@
                 border: none;
             }
         }
-        // a{
-        //     margin: 1vw;
-        // }
-       
     }
   
 }

@@ -12,13 +12,6 @@ interface oneRowSliderProps{
 }
 
 export const CustomSlider:React.FC<oneRowSliderProps> =({children , numberOfSlides , numberOfRows})=>{
-    const slider = useRef<any>();
-    const next = () => {
-      slider.current.slickNext();
-    };
-    const previous = () => {
-      slider.current.slickPrev();
-    };
     const settings = {
         infinite: false,
         speed: 500,
@@ -46,14 +39,14 @@ export const CustomSlider:React.FC<oneRowSliderProps> =({children , numberOfSlid
           {
             breakpoint: 480,
             settings: {
-              slidesToShow: numberOfSlides-3,
+              slidesToShow: numberOfSlides-3 == 0 ? 1 : numberOfSlides-3,
               slidesToScroll: 1
             }
           }
         ]
       };
     return <div className={"oneRowSliderContainer"}> 
-        <Slider ref={(c) => (slider.current = c)} {...settings}>
+        <Slider {...settings}>
           {children}
         </Slider>
       </div>

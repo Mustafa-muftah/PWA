@@ -7,6 +7,9 @@
     display: flex;
     justify-content: space-around;
   flex-wrap: wrap;
+  @media(max-width:767px){
+    margin: 2vw;
+  }
 .dailyOfferCardWrapper{
     display: flex;
     flex-direction: column;
