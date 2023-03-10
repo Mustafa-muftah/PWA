@@ -1,0 +1,6 @@
+@import "../../styles//constants";
+
+
+.notableProductTitle{
+    @include sectionTitle;
+}

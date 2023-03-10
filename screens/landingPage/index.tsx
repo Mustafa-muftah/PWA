@@ -4,6 +4,7 @@ import { SpecialOffers } from "@/components/specialOffer";
 import { Brands } from "@/components/brands";
 import { Privilage } from "@/components/privilege";
 import { DailyOffers } from "@/components/dailyOffers";
+import { NotableProduct } from "@/components/notableProduct";
 
 export const LandingPage: React.FC = () => {
   return (
@@ -21,6 +22,9 @@ export const LandingPage: React.FC = () => {
       </div>
       <div className={styles.dailyOffersWrapper}>
         <DailyOffers/>
+      </div>
+      <div className={styles.notableProduct}>
+        <NotableProduct/>
       </div>
 
     </div>

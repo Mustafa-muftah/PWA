@@ -2,11 +2,16 @@
 
 .container {
   margin: 0 1vw;
+  border-radius: 18px;
   .cardWrapper {
     border: 2px solid #f2f2f2 !important;
     width: 100% !important;
     position: relative;
+    margin: 2vw auto;
     border-radius: 18px;
+    &:hover{
+      box-shadow: rgb(0 0 0 / 8%) 0px 2px 16px 0px 
+    }
     .vertical,
     .horizintal {
       .upperSection {
@@ -88,6 +93,9 @@
 
 .horizintal {
   display: flex;
+  background-color: #fff;
+  border-radius: 18px;
+  padding: 1vw;
   .upperSection {
     padding: 0 !important;
   }
@@ -95,5 +103,6 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    border-top: unset !important;
   }
 }
