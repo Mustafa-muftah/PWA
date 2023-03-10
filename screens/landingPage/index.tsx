@@ -2,6 +2,7 @@ import { PromotedProducts } from "@/components/promotedProducts";
 import styles from "./landingPage.module.scss";
 import { SpecialOffers } from "@/components/specialOffer";
 import { Brands } from "@/components/brands";
+import { Privilage } from "@/components/privilege";
 
 export const LandingPage: React.FC = () => {
   return (
@@ -13,6 +14,9 @@ export const LandingPage: React.FC = () => {
       </div>
       <div className={"brandsWrapper"}>
         <Brands />
+      </div>
+      <div className={"privilageWrapper"}>
+        <Privilage/>
       </div>
 
     </div>

@@ -11,7 +11,7 @@ export const BottomNav: React.FC = () => {
           {navLinks.map((link, index) => {
             return (
               <>
-                <li key={index}>
+                <li key={`${index}${link.name}`}>
                   <Link href={link.link}>{link.name}</Link>
                 </li>
                 <div className={styles.vl}></div>

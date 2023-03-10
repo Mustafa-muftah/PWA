@@ -1,0 +1,25 @@
+@import "../../styles//constants";
+
+.privilageTitle{
+    @include sectionTitle;
+    color:$navbgColor
+}
+
+.image{
+    max-width: 15vw;
+    height: 15vw;
+    margin: auto;
+    @media(max-width:767px){
+        max-width: 18vw;
+        height: 18vw;
+    }
+}
+.privilageType{
+    display: flex;
+    justify-content: center;
+    padding: 2vw 0;
+    color: $greyBlack;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+}

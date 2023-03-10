@@ -8,9 +8,10 @@ import { ReactNode, useRef } from "react";
 interface oneRowSliderProps{
   children:ReactNode,
   numberOfSlides:number,
+  numberOfRows:number,
 }
 
-export const SingleRowSlider:React.FC<oneRowSliderProps> =({children , numberOfSlides})=>{
+export const CustomSlider:React.FC<oneRowSliderProps> =({children , numberOfSlides , numberOfRows})=>{
     const slider = useRef<any>();
     const next = () => {
       slider.current.slickNext();
@@ -25,6 +26,7 @@ export const SingleRowSlider:React.FC<oneRowSliderProps> =({children , numberOfS
         slidesToScroll: 1,
         initialSlide: 0,
         dotsClass:"customSliderDots",
+        slidesPerRow:numberOfRows,
         responsive: [
           {
             breakpoint: 1024,
