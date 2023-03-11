@@ -9,15 +9,24 @@ interface oneRowSliderProps{
   children:ReactNode,
   numberOfSlides:number,
   numberOfRows:number,
+  title:string
 }
 
-export const CustomSlider:React.FC<oneRowSliderProps> =({children , numberOfSlides , numberOfRows})=>{
+export const CustomSlider:React.FC<oneRowSliderProps> =({children , numberOfSlides , numberOfRows,title})=>{
+  const slider = useRef<any>();
+  const next = () => {
+    slider.current.slickNext();
+  };
+  const previous = () => {
+    slider.current.slickPrev();
+  };
     const settings = {
         infinite: false,
         speed: 500,
         slidesToShow: numberOfSlides,
         slidesToScroll: 1,
         initialSlide: 0,
+        arrow:false,
         dotsClass:"customSliderDots",
         slidesPerRow:numberOfRows,
         responsive: [
@@ -46,7 +55,16 @@ export const CustomSlider:React.FC<oneRowSliderProps> =({children , numberOfSlid
         ]
       };
     return <div className={"oneRowSliderContainer"}> 
-        <Slider {...settings}>
+    <div className={"sliderTop"}>
+    <div className="sliderTitle">
+      <span>{title}</span>
+    </div>
+      <div className={"sliderButtons__wrapper"}>
+    <button className="prev" onClick={()=> previous()}></button>
+    <button className="next" onClick={()=> next()}></button>
+    </div>
+    </div>
+        <Slider ref={(c) => (slider.current = c)} {...settings}>
           {children}
         </Slider>
       </div>

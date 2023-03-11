@@ -6,8 +6,8 @@ import styles from "./mostViewedProduct.module.scss"
 export const MostViewedProduct: React.FC = () => {
   return (
     <>
-    <span className={styles.mostViewedTitle}>Most Viewed Products</span>
-      <CustomSlider numberOfSlides={5} numberOfRows={1}>
+    {/* <span className={styles.mostViewedTitle}>Most Viewed Products</span> */}
+      <CustomSlider numberOfSlides={5} numberOfRows={1} title={"Most Viewed Products"}>
         {mostViewedProduct.map((product, index) => {
           return (
             <Card
