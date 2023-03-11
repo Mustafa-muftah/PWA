@@ -7,19 +7,25 @@ import { TopFooter } from "./topFooter";
 import { MidFooter } from "./midFooter";
 import { useAction } from '../../../appState/Hooks/useAction';
 import { useTypeSelector } from '../../../appState/Hooks/useTypedSelector';
+import { isMobileOnly } from "react-device-detect";
+import { useEffect } from "react";
+
 
 
 export const Footer:React.FC =() => {
   const isFooterVisible = useTypeSelector((state)=>state.global.isFooterVisible);
    const { setFooterVisibilty } = useAction();
 
+   useEffect(() => {
+    !isMobileOnly && setFooterVisibilty(true)
+    },[isMobileOnly])
     return (
       <div className={styles.container}>
         <TopFooter/>
         <div className={styles.mobileOnly}>
         {!isFooterVisible && <button onClick={()=>setFooterVisibilty(true)}>Show More</button>}
         </div>
-        {isFooterVisible  && 
+        {isFooterVisible && 
         <>
          <div className={styles.midFooterContainer}>
         <MidFooter/>
