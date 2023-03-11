@@ -5,13 +5,28 @@ import Image from "next/image";
 import PaymentImage from "@/public/payment.jpg"
 import { TopFooter } from "./topFooter";
 import { MidFooter } from "./midFooter";
+import { useAction } from '../../../appState/Hooks/useAction';
+import { useTypeSelector } from '../../../appState/Hooks/useTypedSelector';
+import { useEffect } from "react";
 
 
 export const Footer:React.FC =() => {
+  const isFooterVisible = useTypeSelector((state)=>state.global.isFooterVisible);
+   const { setFooterVisibilty } = useAction();
+
+ useEffect(()=>{
+ console.log(isFooterVisible)
+   },[isFooterVisible])
+
     return (
       <div className={styles.container}>
         <TopFooter/>
-        <div className={styles.midFooterContainer}>
+        <div className={styles.mobileOnly}>
+        {!isFooterVisible && <button onClick={()=>setFooterVisibilty(true)}>Show More</button>}
+        </div>
+        {isFooterVisible  && 
+        <>
+         <div className={styles.midFooterContainer}>
         <MidFooter/>
         </div>
         <div className={styles.wrapper}>
@@ -20,6 +35,10 @@ export const Footer:React.FC =() => {
         </div>
         <Image src={PaymentImage} alt={"payment"} />
         <span>© Copyright 2023   medexsepeti.com </span>
+        </> }
+        <div className={styles.mobileOnly}>
+        {isFooterVisible && <button onClick={()=>setFooterVisibilty(false)}>Show less</button>}
+        </div>
         </div>
     )
 }

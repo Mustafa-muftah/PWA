@@ -10,12 +10,12 @@ export const BottomNav: React.FC = () => {
         <ul>
           {navLinks.map((link, index) => {
             return (
-              <>
-                <li key={`${index}${link.name}`}>
+              <div key={`${index}${link.name}`}>
+                <li >
                   <Link href={link.link}>{link.name}</Link>
                 </li>
                 <div className={styles.vl}></div>
-              </>
+              </div>
             );
           })}
         </ul>

@@ -5,6 +5,20 @@
     .midFooterContainer{
         padding: 2vw;
     }
+    .mobileOnly{
+        display: none;
+        @media(max-width:500px){
+            display: block;
+            margin: auto;
+            text-align: center;
+        }
+        button{
+            color: $mainColor;
+            border: none;
+            background: transparent;
+            margin-bottom: 2vw;
+        }
+    }
     .wrapper{
         display: flex;
         padding: 2vw 4vw;
