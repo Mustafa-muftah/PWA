@@ -1,4 +1,5 @@
 import Link from "next/link";
+import React from "react";
 import styles from "./bottomNav.module.scss";
 import { navLinks } from "./navLinks";
 
@@ -9,13 +10,12 @@ export const BottomNav: React.FC = () => {
       <div className={styles.linkContainer}>
         <ul>
           {navLinks.map((link, index) => {
-            return (
-              <div key={`${index}${link.name}`}>
+            return (<React.Fragment key={`${index}${link.name}`}>
                 <li >
                   <Link href={link.link}>{link.name}</Link>
                 </li>
                 <div className={styles.vl}></div>
-              </div>
+                </React.Fragment>
             );
           })}
         </ul>
