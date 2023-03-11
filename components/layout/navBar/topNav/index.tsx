@@ -6,6 +6,8 @@ import Headphone from "../../../../public/headphone.svg"
 import Language from "../../../../public/wallet.svg"
 import { useState } from "react";
 import { LanguageModal } from "./languageModal";
+import upNavvarImage from "../../../../public/upNavbarImage.jpg"
+
 
 
 
@@ -14,6 +16,8 @@ export const TopNav:React.FC = () => {
     const [openLangDropdown , setOpenLangDropdown] = useState(false);
 
     return(
+      <>
+      <Image className={styles.topImage} src={upNavvarImage} alt={""}/>
     <div className={styles.container}>
     <div className={styles.linksWrapper}>
     <Link href={"/"} >
@@ -47,5 +51,6 @@ export const TopNav:React.FC = () => {
     </div>
     </div>
     </div>
+    </>
     )
 }

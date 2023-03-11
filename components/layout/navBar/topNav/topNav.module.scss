@@ -1,5 +1,14 @@
 @import '../../../../styles//constants';
 
+.topImage{
+    width: 100%;
+    height: auto;
+    margin-bottom: -0.3vw;
+    @media(max-width:767px){
+        margin-bottom: -1vw;
+    }
+}
+
 .container {
     display: flex;
     background-color: $subMainColor;

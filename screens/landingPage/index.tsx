@@ -32,7 +32,7 @@ export const LandingPage: React.FC = () => {
       <div className={styles.mostViewedProductWrapper}>
       <MostViewedProduct/>
       </div>
-      <div className={styles.discoverWrapper}>
+      <div className={styles.discover}>
       <Discover/>
       </div>
     </div>
