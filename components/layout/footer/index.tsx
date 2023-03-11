@@ -2,21 +2,16 @@ import { ContactUs } from "./contactUs/contactUs"
 import { FooterLinks } from "./footerLinks/footerLinks"
 import styles from "./footer.module.scss"
 import Image from "next/image";
-import PaymentImage from "@/public/payment.jpg"
+import PaymentImage from "../../../public/footer/paymentMethods.jpg"
 import { TopFooter } from "./topFooter";
 import { MidFooter } from "./midFooter";
 import { useAction } from '../../../appState/Hooks/useAction';
 import { useTypeSelector } from '../../../appState/Hooks/useTypedSelector';
-import { useEffect } from "react";
 
 
 export const Footer:React.FC =() => {
   const isFooterVisible = useTypeSelector((state)=>state.global.isFooterVisible);
    const { setFooterVisibilty } = useAction();
-
- useEffect(()=>{
- console.log(isFooterVisible)
-   },[isFooterVisible])
 
     return (
       <div className={styles.container}>
