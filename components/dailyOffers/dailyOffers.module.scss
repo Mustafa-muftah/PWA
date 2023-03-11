@@ -7,17 +7,21 @@
     display: flex;
     justify-content: space-around;
   flex-wrap: wrap;
-  @media(max-width:767px){
-    margin: 2vw;
-  }
+
 .dailyOfferCardWrapper{
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    @media(max-width:767px){
+        margin: 2vw;
+      }
     img{
         border: 2px solid #f7f7f7;
         border-radius: 5px 5px 0 0 ;
+        @media(max-width:767px){
+            width: 40vw;
+        }
     }
     .offerLink{
         border: 2px solid #f7f7f7;

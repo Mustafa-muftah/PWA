@@ -6,6 +6,12 @@ import TwitterIcon from "@/public/icons/twitterSVG"
 import YoutubeIcon from "@/public/icons/youtubeSVG"
 import AppStore from "@/public/app-store.png"
 import GoogleStore from "@/public/google-store.png"
+import footer1 from "@/public/footer/footer1.svg"
+import footer2 from "@/public/footer/footer2.svg"
+import footer3 from "@/public/footer/footer3.svg"
+import footer4 from "@/public/footer/footer4.svg"
+import footer5 from "@/public/footer/footer5.svg"
+
 import { StaticImageData } from "next/image"
 
 interface footerLinks {
@@ -202,4 +208,34 @@ export const getApp:AppInfo[] = [
         link:"/",
         image:GoogleStore
     },
+]
+interface TopFooter{
+    text:string,
+    image:StaticImageData
+}
+export const topFooter:TopFooter[] =[
+    {
+        text:"Delivery Today",
+        image:footer1
+    },
+    {
+        text:"Easy Return",
+        image:footer2
+    },
+    {
+        text:"Instant Transfer",
+        image:footer3
+    },
+    {
+        text:"Pay At Door",
+        image:footer5
+    },
+    {
+        text:"Multiple Credit Cards",
+        image:footer4
+    },
+    // {
+    //     text:"Multiple Credit Cards",
+    //     image:footer5
+    // }
 ]

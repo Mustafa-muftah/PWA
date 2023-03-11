@@ -2,6 +2,9 @@
 
 .container {
     background-color: $white;
+    .midFooterContainer{
+        padding: 2vw;
+    }
     .wrapper{
         display: flex;
         padding: 2vw 4vw;

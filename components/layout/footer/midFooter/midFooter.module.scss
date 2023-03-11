@@ -1,0 +1,46 @@
+@import "../../../../styles//constants";
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 2px solid #f7f7f7;
+  border-top: 2px solid #f7f7f7;
+  flex-wrap: wrap;
+  padding: 2vw;
+  @media(max-width:767px){
+    padding: 4vw 2vw;
+  }
+  .leftSec {
+    max-width: 20%;
+    margin: auto;
+    font-size: 2vw;
+    font-weight: 600;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      background: $mainColor;
+      width: 45%;
+      height: 11px;
+      top: 77%;
+      transform: translate(4px, -50%);
+      bottom: 0;
+    }
+    @media(max-width:767px){
+        font-size: $titleMobileFont;
+    }
+  }
+  .rightSec {
+    max-width: 70%;
+    margin: auto;
+    color: #808080;
+    font-size: $regularFontSize;
+    @media(max-width:767px){
+        font-size: $regularMobileFont;
+    }
+    a{
+        color:$mainColor;
+        text-decoration: none;
+    }
+  }
+}

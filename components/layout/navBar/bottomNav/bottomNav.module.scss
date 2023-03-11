@@ -10,13 +10,24 @@
     display: none;
     }
     button{
-        @include Button
+        @include Button;
+        &:hover{
+            background-color:$navbgColor;
+            color:$yellow;
+            border-color:$navbgColor
+        }
     }
     .blackBtn {
         @include Button ;
             background-color: #000;
             border:1px solid #000;
             font-weight: 600;
+            &:hover{
+                background-color: #000;
+                color: #000;
+                color:#fff;
+                border-color:none
+            }
     }
     .linkContainer{
         display: flex;

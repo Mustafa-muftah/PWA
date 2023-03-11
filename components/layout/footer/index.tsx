@@ -3,13 +3,17 @@ import { FooterLinks } from "./footerLinks/footerLinks"
 import styles from "./footer.module.scss"
 import Image from "next/image";
 import PaymentImage from "@/public/payment.jpg"
-
-
+import { TopFooter } from "./topFooter";
+import { MidFooter } from "./midFooter";
 
 
 export const Footer:React.FC =() => {
     return (
       <div className={styles.container}>
+        <TopFooter/>
+        <div className={styles.midFooterContainer}>
+        <MidFooter/>
+        </div>
         <div className={styles.wrapper}>
       <FooterLinks/>
       <ContactUs/>
