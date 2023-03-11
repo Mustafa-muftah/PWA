@@ -1,12 +1,12 @@
 import { StaticImageData } from "next/image";
-import privilage1 from "../../public/privilage/privilage1.png";
-import privilage2 from "../../public/privilage/privilage2.png";
-import privilage3 from "../../public/privilage/privilage3.png";
-import privilage4 from "../../public/privilage/privilage4.png";
-import privilage5 from "../../public/privilage/privilage5.png";
-import privilage6 from "../../public/privilage/privilage6.png";
-import privilage7 from "../../public/privilage/privilage7.png";
-import privilage8 from "../../public/privilage/privilage8.png";
+import privilage1 from "../../public/privilage/Privilage1.png";
+import privilage2 from "../../public/privilage/Privilage2.png";
+import privilage3 from "../../public/privilage/Privilage3.png";
+import privilage4 from "../../public/privilage/Privilage4.png";
+import privilage5 from "../../public/privilage/Privilage5.png";
+import privilage6 from "../../public/privilage/Privilage6.png";
+import privilage7 from "../../public/privilage/Privilage7.png";
+import privilage8 from "../../public/privilage/Privilage8.png";
 
 
 
