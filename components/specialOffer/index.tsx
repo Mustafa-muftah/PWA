@@ -1,7 +1,6 @@
 import { Card } from "../global/card";
 import { CustomSlider } from "../global/customSlider";
 import { specialOffersData } from "./specialOffersData";
-import styles from "./specialOffer.module.scss"
 
 export const SpecialOffers: React.FC = () => {
   return (

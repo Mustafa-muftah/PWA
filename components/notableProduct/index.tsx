@@ -1,7 +1,6 @@
 import { Card } from "../global/card";
 import { CustomSlider } from "../global/customSlider";
 import { notableProducts } from "./notableProductData";
-import styles from "./notableProduct.module.scss"
 
 
 
