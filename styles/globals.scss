@@ -143,9 +143,9 @@ body {
 }
 .privilageWrapper .oneRowSliderContainer .prev {
   @include leftArrowButton;
-  width: 2rem;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='35.483' height='35.483' viewBox='0 0 65.483 65.483'%3E%3Cg id='Left_arrow' transform='translate(3511.241 2978.741)'%3E%3Cg id='Ellipse_136' data-name='Ellipse 136' transform='translate(-3445.759 -2913.259) rotate(180)' fill='%23fff' stroke='%2322b0f0' stroke-width='1'%3E%3Ccircle cx='32.741' cy='32.741' r='32.741' stroke='none'%3E%3C/circle%3E%3Ccircle cx='32.741' cy='32.741' r='32.241' fill='none'%3E%3C/circle%3E%3C/g%3E%3Cg id='right-arrow' transform='translate(-3469.069 -2929.946) rotate(180)'%3E%3Cg id='Group_1214' data-name='Group 1214'%3E%3Cpath id='Path_303' data-name='Path 303' d='M119.83,14.8,105.541.513a1.76,1.76,0,0,0-2.484,0L102,1.565a1.759,1.759,0,0,0,0,2.484l12,12L101.991,28.06a1.761,1.761,0,0,0,0,2.484l1.052,1.052a1.76,1.76,0,0,0,2.484,0l14.3-14.3a1.773,1.773,0,0,0,0-2.493Z' transform='translate(-101.478)' fill='%2322b0f0'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     @media (max-width: 1115px) {
+      width: 2rem;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25.483' height='25.483' viewBox='0 0 65.483 65.483'%3E%3Cg id='Left_arrow' transform='translate(3511.241 2978.741)'%3E%3Cg id='Ellipse_136' data-name='Ellipse 136' transform='translate(-3445.759 -2913.259) rotate(180)' fill='%23fff' stroke='%2322b0f0' stroke-width='1'%3E%3Ccircle cx='32.741' cy='32.741' r='32.741' stroke='none'%3E%3C/circle%3E%3Ccircle cx='32.741' cy='32.741' r='32.241' fill='none'%3E%3C/circle%3E%3C/g%3E%3Cg id='right-arrow' transform='translate(-3469.069 -2929.946) rotate(180)'%3E%3Cg id='Group_1214' data-name='Group 1214'%3E%3Cpath id='Path_303' data-name='Path 303' d='M119.83,14.8,105.541.513a1.76,1.76,0,0,0-2.484,0L102,1.565a1.759,1.759,0,0,0,0,2.484l12,12L101.991,28.06a1.761,1.761,0,0,0,0,2.484l1.052,1.052a1.76,1.76,0,0,0,2.484,0l14.3-14.3a1.773,1.773,0,0,0,0-2.493Z' transform='translate(-101.478)' fill='%2322b0f0'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     }
 }
