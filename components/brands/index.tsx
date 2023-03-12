@@ -8,8 +8,7 @@ import styles from "./brands.module.scss"
 
 export const Brands:React.FC =()=>{
     return<>
-    {/* <span className={styles.brandsTitle}>Brands</span> */}
-    <CustomSlider numberOfSlides={6} numberOfRows={1} title={"Brands"}>
+    <CustomSlider slidesToShow={6} numberOfRows={1} title={"Brands"} numberOfSlidesProps={brandsData.length}>
     {brandsData.map((brand,index)=>{
         return <div key={index}>
            <Link href={brand.link}> <Image className={styles.image} src={brand.image} alt={brand.brandsName}></Image></Link>

@@ -6,8 +6,7 @@ import styles from "./specialOffer.module.scss"
 export const SpecialOffers: React.FC = () => {
   return (
     <>
-    {/* <span className={styles.specialOfferTitle}>Special Offers</span> */}
-      <CustomSlider numberOfSlides={5} numberOfRows={1} title={"Special Offers"}>
+      <CustomSlider slidesToShow={5} numberOfRows={1} title={"Special Offers"} numberOfSlidesProps={specialOffersData.length}>
         {specialOffersData.map((specialOffer, index) => {
           return (
             <Card

@@ -7,8 +7,7 @@ import styles from "./notableProduct.module.scss"
 
 export const NotableProduct:React.FC =() => {
     return<>
-    {/* <span className={styles.notableProductTitle}>Notable Products</span> */}
-      <CustomSlider numberOfSlides={3} numberOfRows={2} title={"Notable Products"}>
+      <CustomSlider slidesToShow={3} numberOfRows={2} title={"Notable Products"} numberOfSlidesProps={notableProducts.length}>
         {notableProducts.map((product, index) => {
           return (
             <Card

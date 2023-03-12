@@ -7,8 +7,7 @@ import styles from "./discover.module.scss"
 
 export const Discover:React.FC =() => {
     return<>
-    {/* <span className={styles.discoverTitle}>Discover</span> */}
-      <CustomSlider numberOfSlides={3} numberOfRows={2} title={"Discover"}>
+      <CustomSlider slidesToShow={3} numberOfRows={2} title={"Discover"} numberOfSlidesProps={discover.length}>
         {discover.map((product, index) => {
           return (
             <Card
