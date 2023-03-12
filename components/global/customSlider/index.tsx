@@ -20,12 +20,10 @@ export const CustomSlider: React.FC<oneRowSliderProps> = ({
   const [numberOfSlidesAvailable, setNumOfSlidesAvailable] = useState<number>();
   const slider = useRef<any>();
   const next = () => {
-    slider.current.slickNext();
-    setNumOfSlides(numOfSlides + 1);
+    slider?.current?.slickNext();
   };
   const previous = () => {
-    slider.current.slickPrev();
-    setNumOfSlides(numOfSlides - 1);
+    slider?.current?.slickPrev();
   };
 
   useEffect(() => {
@@ -36,7 +34,7 @@ export const CustomSlider: React.FC<oneRowSliderProps> = ({
         Math.floor(numberOfSlidesProps / slidesToShow) - 1
       );
     }
-  }, []);
+  });
 
   const settings = {
     infinite: false,
@@ -47,6 +45,9 @@ export const CustomSlider: React.FC<oneRowSliderProps> = ({
     arrow: false,
     dotsClass: "customSliderDots",
     slidesPerRow: numberOfRows,
+    beforeChange: (currentIndex: number, nextIndex: number) => {
+      setNumOfSlides(nextIndex);
+    },
     responsive: [
       {
         breakpoint: 1024,
